@@ -1,10 +1,14 @@
+coreapi==2.0.9
 Django==1.9.7
 django-allauth==0.26.1
 django-settings-export==1.1.0
 django-stronghold==0.2.8
+djangorestframework==3.5.3
+itypes==1.1.0
 MySQL-python==1.2.5
 oauthlib==1.1.2
 python-openid==2.2.5
 requests==2.10.0
 requests-oauthlib==0.6.2
+uritemplate==3.0.0
 wheel==0.24.0

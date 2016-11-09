@@ -16,14 +16,21 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy
+from rest_framework.schemas import get_schema_view
 
 import views
+
+schema_view = get_schema_view(title='Taggy Rest API')
 
 app_name = 'taggy'
 urlpatterns = [
     # Plugins
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
+
+    url(r'^rest-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^rest-schema/$', schema_view),
+    url(r'^rest/', include('taggy.rest')),
 
     # Index
     url(r'^$', views.index, name='index'),

@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'stronghold',
     'django.contrib.sites',
 
+    'rest_framework',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -169,6 +171,9 @@ STRONGHOLD_PUBLIC_URLS = (
     r'^%s.*$' % STATIC_URL,
 #    r'^%s.+$' % MEDIA_URL,
     r'^/accounts/.*',
+    r'^/rest-auth/.*',
+    r'^/rest-schema/.*',
+    r'^/rest/.*',
     r'^/admin/.*',
 )
 
